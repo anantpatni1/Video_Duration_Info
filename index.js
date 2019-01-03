@@ -8,7 +8,6 @@ app.on('ready',()=>{
 mainWindow.loadURL(`file://${__dirname}/index.html`);
 });
 
-
 ipcMain.on('getvideolength',(event, path)=>{//receiving from html
 
   ffmpeg.ffprobe(path, (err,metadata)=>{
